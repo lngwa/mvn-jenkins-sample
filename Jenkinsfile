@@ -12,7 +12,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                bat "cp target/mvn-jenkins-sample.war C:/xampp/tomcat/webapp"
+                bat "copy target\mvn-jenkins-sample.war C:\xampp\tomcat\webapps"
             }
         }
     }
