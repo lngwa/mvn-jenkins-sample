@@ -1,13 +1,14 @@
 pipeline {
     agent any
+    tools {
+        maven 'maven_4_0_0'
+    }
     stages {
         stage('build') {
             steps {
-                withMaven(maven: 'maven_4_0_0'){
-                    sh "mvn clean package"
-                }
+                sh 'echo building project ...'
+                sh "mvn clean package"
             }
-
         }
         stage("deploy") {
             steps {
