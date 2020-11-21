@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh "echo building ..."
-                withMaven(maven: 'maven_3_5_0'){
+                withMaven(maven: 'maven_4_0_0'){
                     sh "mvn clean package"
                 }
             }
