@@ -10,7 +10,7 @@ pipeline {
                 sh "mvn clean package"
             }
         }
-        stage("deploy") {
+        stage('deploy') {
             steps {
                 sh "cp target/mvn-jenkins-sample.war C:/xampp/tomcat/webapp"
             }
